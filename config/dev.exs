@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :wibble, Wibble.Repo,
   username: "postgres",
-  password: "toor",
+  password: System.get_env("DEV_PW"),
   database: "wibble_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,

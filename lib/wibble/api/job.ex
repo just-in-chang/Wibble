@@ -15,7 +15,7 @@ defmodule Wibble.Api.Job do
   @doc false
   def changeset(job, attrs) do
     job
-    |> cast(attrs, [:company, :position, :status])
-    |> validate_required([:company, :position, :status])
+    |> cast(attrs, [:company, :position, :status, :user_id])
+    |> validate_required([:company, :position, :status, :user_id])
   end
 end

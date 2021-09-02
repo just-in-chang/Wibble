@@ -14,9 +14,10 @@ defmodule WibbleWeb.UserView do
     %{id: user.id, username: user.username}
   end
 
-  def render("success.json", _) do
+  def render("success.json", %{user: user}) do
     %{
-      success: true
+      success: true,
+      id: user.id
     }
   end
 

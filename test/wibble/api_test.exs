@@ -68,7 +68,11 @@ defmodule Wibble.ApiTest do
     alias Wibble.Api.Job
 
     @valid_attrs %{company: "some company", position: "some position", status: "some status"}
-    @update_attrs %{company: "some updated company", position: "some updated position", status: "some updated status"}
+    @update_attrs %{
+      company: "some updated company",
+      position: "some updated position",
+      status: "some updated status"
+    }
     @invalid_attrs %{company: nil, position: nil, status: nil}
 
     def job_fixture(attrs \\ %{}) do

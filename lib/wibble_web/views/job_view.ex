@@ -11,6 +11,6 @@ defmodule WibbleWeb.JobView do
   end
 
   def render("job.json", %{job: job}) do
-    %{id: job.id, company: job.company, position: job.position, status: job.status}
+    %{id: job.id, company: job.company, position: job.position, status: job.status, link: job.link}
   end
 end

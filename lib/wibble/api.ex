@@ -164,7 +164,6 @@ defmodule Wibble.Api do
 
   """
   def create_job(attrs \\ %{}) do
-    IO.inspect attrs
     %Job{}
     |> Job.changeset(attrs)
     |> Repo.insert()

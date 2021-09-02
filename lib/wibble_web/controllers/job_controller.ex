@@ -40,4 +40,11 @@ defmodule WibbleWeb.JobController do
       send_resp(conn, :no_content, "")
     end
   end
+
+  def jobs(conn, %{"id" => id}) do
+    user = Wibble.Api.get_user!(id)
+
+    user = Wibble.Repo.preload(user, :jobs)
+    render(conn, "index.json", jobs: user.jobs)
+  end
 end

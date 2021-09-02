@@ -9,6 +9,5 @@ defmodule Wibble.Repo.Migrations.CreateJobs do
 
       timestamps()
     end
-
   end
 end

@@ -10,6 +10,8 @@ defmodule WibbleWeb.Router do
     resources "/users", UserController, except: [:new, :edit]
     resources "/jobs", JobController, except: [:new, :edit]
     post "/users/login", UserController, :login
+
+    get "/users/jobs/:id", JobController, :jobs
   end
 
   # Enables LiveDashboard only for development

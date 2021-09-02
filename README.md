@@ -1,6 +1,6 @@
-# Wibble
+# 🏢 Wibble
 
-Wibble is a simple, easy to use app to help software engineers track their job applications. 
+Wibble is a simple, easy to use app to help software engineers track the progress of their job applications. It utilizes an Elixir Phoenix back-end API and a React.js front-end. 
 
 ## Schema
 

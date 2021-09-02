@@ -9,7 +9,7 @@ use Mix.Config
 
 config :wibble,
   ecto_repos: [Wibble.Repo],
-  generators: [binary_id: true]
+  generators: [binary_id: false]
 
 # Configures the endpoint
 config :wibble, WibbleWeb.Endpoint,

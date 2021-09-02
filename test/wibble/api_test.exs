@@ -6,9 +6,9 @@ defmodule Wibble.ApiTest do
   describe "users" do
     alias Wibble.Api.User
 
-    @valid_attrs %{email: "some email", is_active: true}
-    @update_attrs %{email: "some updated email", is_active: false}
-    @invalid_attrs %{email: nil, is_active: nil}
+    @valid_attrs %{username: "some username", is_active: true}
+    @update_attrs %{username: "some updated username", is_active: false}
+    @invalid_attrs %{username: nil, is_active: nil}
 
     def user_fixture(attrs \\ %{}) do
       {:ok, user} =
@@ -31,7 +31,7 @@ defmodule Wibble.ApiTest do
 
     test "create_user/1 with valid data creates a user" do
       assert {:ok, %User{} = user} = Api.create_user(@valid_attrs)
-      assert user.email == "some email"
+      assert user.username == "some username"
       assert user.is_active == true
     end
 
@@ -42,7 +42,7 @@ defmodule Wibble.ApiTest do
     test "update_user/2 with valid data updates the user" do
       user = user_fixture()
       assert {:ok, %User{} = user} = Api.update_user(user, @update_attrs)
-      assert user.email == "some updated email"
+      assert user.username == "some updated username"
       assert user.is_active == false
     end
 

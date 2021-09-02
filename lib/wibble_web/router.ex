@@ -8,6 +8,7 @@ defmodule WibbleWeb.Router do
   scope "/api", WibbleWeb do
     pipe_through :api
     resources "/users", UserController, except: [:new, :edit]
+    resources "/jobs", JobController, except: [:new, :edit]
     post "/users/login", UserController, :login
   end
 

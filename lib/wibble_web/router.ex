@@ -2,6 +2,7 @@ defmodule WibbleWeb.Router do
   use WibbleWeb, :router
 
   pipeline :api do
+    plug CORSPlug
     plug :accepts, ["json"]
   end
 
@@ -10,8 +11,12 @@ defmodule WibbleWeb.Router do
     resources "/users", UserController, except: [:new, :edit]
     resources "/jobs", JobController, except: [:new, :edit]
     post "/users/login", UserController, :login
-
     get "/users/jobs/:id", JobController, :jobs
+
+    options "/users", UserController, :options
+    options "/jobs", JobController, :options
+    options "/users/login", UserController, :options
+    options "/users/jobs/:id", JobController, :options
   end
 
   # Enables LiveDashboard only for development

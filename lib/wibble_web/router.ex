@@ -15,6 +15,7 @@ defmodule WibbleWeb.Router do
 
     options "/users", UserController, :options
     options "/jobs", JobController, :options
+    options "/jobs/:id", JobController, :options
     options "/users/login", UserController, :options
     options "/users/jobs/:id", JobController, :options
   end

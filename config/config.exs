@@ -15,7 +15,7 @@ config :wibble,
 config :wibble, WibbleWeb.Endpoint,
   http: [port: 4000],
   https: [
-    port: 4001,
+    port: 80,
     cipher_suite: :strong,
     certfile: "/etc/letsencrypt/live/api.justinchang.dev/fullchain.pem",
     keyfile: "/etc/letsencrypt/live/api.justinchang.dev/privkey.pem"

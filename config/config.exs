@@ -15,10 +15,10 @@ config :wibble,
 config :wibble, WibbleWeb.Endpoint,
   http: [port: 4000],
   https: [
-    port: 80,
+    port: 4001,
     cipher_suite: :strong,
-    certfile: "/etc/letsencrypt/live/api.wibble.justinchang.dev/fullchain.pem",
-    keyfile: "/etc/letsencrypt/live/api.wibble.justinchang.dev/privkey.pem"
+    certfile: "/etc/letsencrypt/live/api.justinchang.dev/fullchain.pem",
+    keyfile: "/etc/letsencrypt/live/api.justinchang.dev/privkey.pem"
   ],
   url: [host: "localhost"],
   secret_key_base: "7e6X4QLD1WilsHRsBh8sT7euYdKstQNJhI1lg92qqiv3DuCxmhZrNcC5OOfp5Qb4",

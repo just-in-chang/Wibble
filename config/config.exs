@@ -13,6 +13,13 @@ config :wibble,
 
 # Configures the endpoint
 config :wibble, WibbleWeb.Endpoint,
+  http: [port: 4000],
+  https: [
+    port: 4001,
+    cipher_suite: :strong,
+    certfile: "priv/cert/selfsigned.pem",
+    keyfile: "priv/cert/selfsigned_key.pem"
+  ],
   url: [host: "localhost"],
   secret_key_base: "7e6X4QLD1WilsHRsBh8sT7euYdKstQNJhI1lg92qqiv3DuCxmhZrNcC5OOfp5Qb4",
   render_errors: [view: WibbleWeb.ErrorView, accepts: ~w(json), layout: false],

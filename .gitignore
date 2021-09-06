@@ -29,3 +29,5 @@ wibble-*.tar
 
 # Environmental Variables
 .env
+
+priv/cert/
